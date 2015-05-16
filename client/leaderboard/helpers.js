@@ -1,7 +1,7 @@
 Template.leaderboard.helpers({
   player: function () {
     var currentUserId = Meteor.userId();
-    return PlayersList.find({createdBy: currentUserId}, {sort: {score: -1, name: 1}});
+    return PlayersList.find({}, {sort: {score: -1, name: 1}});
   },
   playersCount: function () {
     return PlayersList.find({}).count();
