@@ -10,5 +10,11 @@ Template.leaderboard.events({
   'click .decrement': function () {
     var selectedPlayer = Session.get('selectedPlayer');
     PlayersList.update(selectedPlayer, {$inc: {score: -5}})
+  },
+  'click .remove': function () {
+    var selectedPlayer = Session.get('selectedPlayer');
+    if (confirm('Are you sure?')) {
+      PlayersList.remove(selectedPlayer);
+    }
   }
 });

@@ -6,7 +6,7 @@ Template.leaderboard.helpers({
     return PlayersList.find({}).count();
   },
   selectedClass: function () {
-    var playerId = this._id._str;
+    var playerId = this._id;
     var selectedPlayer = Session.get('selectedPlayer');
     if (playerId == selectedPlayer) {
       return 'selected';

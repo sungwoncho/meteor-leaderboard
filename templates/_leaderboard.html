@@ -5,6 +5,7 @@
 
   {{#each player}}
     <li class="player {{ selectedClass }}">{{name}}: {{score}}</li>
+    <input type="button" class="remove" value="Remove Player">
   {{/each}}
 
   {{# if showSelectedPlayer}}
@@ -13,4 +14,6 @@
 
     <li>Selected Player: {{showSelectedPlayer.name}}</li>
   {{/if}}
+
+  {{> addPlayerForm}}
 </template>
