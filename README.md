@@ -4,7 +4,7 @@ A sample application written with Meteor. It gives users a leaderboard to manage
 
 ## Demo
 
-[Visit demo application](leaderboard-swc.meteor.com)
+[Visit demo application](https://leaderboard-swc.meteor.com)
 
 ## Credit
 
