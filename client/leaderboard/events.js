@@ -13,8 +13,9 @@ Template.leaderboard.events({
   },
   'click .remove': function () {
     var selectedPlayer = Session.get('selectedPlayer');
+    console.log(selectedPlayer);
     if (confirm('Are you sure?')) {
-      PlayersList.remove(selectedPlayer);
+      Meteor.call('removePlayerData', selectedPlayer);
     }
   }
 });
