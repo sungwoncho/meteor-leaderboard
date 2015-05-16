@@ -15,6 +15,9 @@ Meteor.startup(function () {
     },
     removePlayerData: function (selectedPlayer) {
       PlayersList.remove(selectedPlayer)
+    },
+    modifyPlayerScore: function (selectedPlayer, scoreValue) {
+      PlayersList.update(selectedPlayer, {$inc: {score: scoreValue}})
     }
   })
 });
